@@ -1,0 +1,93 @@
+/* 작은 사이즈 pc 레이아웃 깨지는 부분까지 위드 보장되는 지점*/
+
+@media screen and (max-width: 1300px) { /*1024보고 조정 *** 항상 최소값이 기준이어야 한다 ! */
+
+    .sc_top li a p { top: 40%; font-size: 9vh;}
+    .sc_top li a:hover p{ font-size: 10vh;}
+    .sc_top li em { bottom: 40%;}
+    
+    .sc_mid { font-size: 60px;}
+    .sc_mid p { line-height: 1.4;}
+    .sc_mid .img_wrap img {height: auto; width: 45vw;}
+    
+    .sc_bottom .right ul li {width: calc((100% - 30px)/2); margin-left: 30px; margin-bottom:30px;}
+    .sc_bottom .right ul li:nth-child(2n-1) { margin-left: 0;}
+
+    .sc_bottom .left { width: 40%;}
+    .sc_bottom .left h2 { font-size: 80px;}
+    .sc_bottom .left a b { font-size: 30px;}
+    .sc_bottom .left a { font-size: 25px;}
+    .sc_bottom .right { width: 50%;}
+    
+
+  }
+ 
+  
+  /* 테블릿 */
+  
+  @media screen and (max-width: 1024px) { /*768을 보고 조정*/
+    .cursor { display: none;}
+    .sc_top .list { max-width: 500px;}
+    .sc_top .list .swiper-slide { height: 50vh;}
+    .sc_top li a p { font-size: 5vh;}
+    .sc_top li a:hover p {font-size: 5vh;}
+    .sc_top li em {font-size: 20px; bottom: 45%;}
+    .main_vis h2::after{ animation: scroll_arr3 1.5s ease-in-out Infinite; }
+    
+    .sc_mid .img_wrap { height: 130vh;} 
+    .sc_mid .img_wrap img {height: auto; width: 40vw;}
+    .sc_mid p { width: 50%; line-height: 1.5;}
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {content: 'next';}
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {content: 'prev';}
+    .sc_top .swiper-button-next, .swiper-button-prev {width: 15px;}
+    .sc_top .list .swiper-button-prev, .swiper-rtl .swiper-button-next { left: -10%;}
+    .sc_top .list .swiper-button-next, .swiper-rtl .swiper-button-prev { right: -10%;}
+  
+  }
+  
+  /*모바일*/
+
+  @media screen and (max-width: 768px) {
+    .cursor { display: none;}
+    .loading .ld_wrap { font-size: 20px; height: 23px; }
+    .fix_menu { display: none;}
+    header .m_header { display: block;}
+
+    .main_vis h2 { font-size: 38px; }
+    .main_vis h2::after{ animation: scroll_arr2 1.5s ease-in-out Infinite; left: -25px;}
+    .main_vis h2::before { left: -20px;}
+    .sc_top { margin: 100px 0;}
+   .sc_top .list { width: 90%; }
+   .sc_top .list .swiper-slide { padding-bottom: 50px; height: 43vh;}
+   .sc_top .list .swiper-slide span { font-size: 11px; line-height: 15px; margin-top: 7px;}
+   .sc_top .list .swiper-button-next, .swiper-rtl .swiper-button-prev {
+          right: 0%;
+    top: 50%;
+    transform: translateY(-50%);}
+    .swiper-button-next:after, .swiper-button-prev:after { font-size: 15px;}
+  
+
+    .sc_top .list .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+    .sc_top .swiper-pagination { margin-top: 20px; font-size: 13px;}
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {content: 'next';}
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {content: 'prev';}
+    .sc_top .swiper-button-next, .swiper-button-prev {width: 15px;}
+    .sc_top li a:hover p { font-size: 30px;}
+    .sc_top li a p { font-size: 30px; top: 40%;}
+    .sc_top li em {font-size: 12px; bottom: 45%;}
+
+    .sc_mid { font-size: 25px;margin: 50px 0; }
+    .sc_mid p{line-height: 1.5; width: 60%;}
+    .sc_mid .img_wrap { height: 120vh; top: 100%;}
+    
+    .sc_bottom .left { width: 100%;  }
+    .sc_bottom .left h2 {font-size: 30px;}
+    .sc_bottom .left a { font-size: 15px; margin-top: 20px;}
+    .sc_bottom .left a b { font-size: 18px;}
+    .sc_bottom .right { width: 100%; margin-top: 40px;}
+    .sc_bottom .right ul li { margin-bottom: 15px; width: calc((100% - 15px)/2); margin-left: 15px;}
+  }
